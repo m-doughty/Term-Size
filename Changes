@@ -1,7 +1,9 @@
 Revision history for Term::Size
 
 {{$NEXT}}
-    - Fix Linux ?
+
+0.1.1  2025-07-11T00:41:21+01:00
+    - Fix Linux build
 
 0.1.0  2025-07-11T00:37:32+01:00
     - Initial version
