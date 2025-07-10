@@ -1,0 +1,81 @@
+=begin pod
+
+=head1 NAME
+
+Term::Size - Get terminal size metrics in Raku
+
+=head1 SYNOPSIS
+
+=begin code :lang<raku>
+
+use Term::Size;
+
+my $term-size = Term::Size.new;
+$term-size.populate;
+
+$term-size.term-width-px;     # Terminal width in pixels (0 = not detected)
+$term-size.term-height-px;    # Terminal height in pixels (0 = not detected)
+$term-size.term-width-cells;  # Terminal width in cells (0 = not detected)
+$term-size.term-height-cells; # Terminal height in cells (0 = not detected)
+$term-size.cell-width-px;     # Cell width in pixels (0 = not detected)
+$term-size.cell-height-px;    # Cell height in pixels (0 = not detected)
+
+=end code
+
+=head2 STATUS
+
+This module allows retrieval of various terminal size metrics on Mac OS & Linux systems.
+
+It can get this information from the Kitty escape sequence protocol (also supported on
+Wezterm & Rio) with a fallback to ioctl.
+
+Windows support is not planned at this time as getting cell size on Windows is a nightmare.
+
+=head1 EXTERNAL API
+
+=head2 LLM::Character
+
+=head3 .populate()
+
+Fetches the terminal information from FFI.
+
+=head3 .term-width-px()
+
+Terminal width in pixels (0 = not detected)
+
+=head3 .term-height-px()
+
+Terminal height in pixels (0 = not detected)
+
+=head3 .term-width-cells()
+
+Terminal width in cells (0 = not detected)
+
+=head3 .term-height-cells()
+
+Terminal height in cells (0 = not detected)
+
+=head3 .cell-width-px()
+
+Cell width in pixels (0 = not detected)
+
+=head3 .cell-height-px()
+
+Cell height in pixels (0 = not detected)
+
+=head2 termsize
+
+This module installs a termsize script which can be run from anywhere.
+
+=head1 AUTHOR
+
+=item Matt Doughty
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright 2025 Matt Doughty
+
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
+
+=end pod
+

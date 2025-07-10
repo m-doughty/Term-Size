@@ -1,0 +1,30 @@
+{
+  "auth": "zef:apogee",
+  "authors": [
+    "Matt Doughty"
+  ],
+  "build": "Build.rakumod",
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Get terminal size & cell size.",
+  "license": "Artistic-2.0",
+  "name": "Term::Size",
+  "perl": "6.d",
+  "provides": {
+    "Term::Size": "lib/Term/Size.rakumod",
+    "Term::Size::Native": "lib/Term/Size/Native.rakumod"
+  },
+  "resources": [
+    "libtermsize.so",
+    "libtermsize.dylib"
+  ],
+  "source-url": "https://github.com/m-doughty/Term-Size.git",
+  "tags": [
+    "terminal"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.1.0"
+}
