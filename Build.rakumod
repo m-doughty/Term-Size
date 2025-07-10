@@ -6,7 +6,7 @@ class Build {
 		say "Staging to $dist-path.";
 
 		my $status = shell "cd ext && make";
-		die "❌ Failed to build tokenizers-ffi via make" if $status != 0;
+		die "❌ Failed to build libtermsize via make" if $status != 0;
 
 		my $os = $*KERNEL.name.lc;
 
